@@ -1,0 +1,256 @@
+/*
+#359296ad
+#262626
+#2a2a2a
+#989898
+*/
+
+.navbar {
+    --bs-navbar-hover-color: #359296ad;
+}
+
+.nav-link {
+    color: #262626;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 18px !important;
+}
+
+.nav-link:hover {
+    color: #359296ad;
+}
+
+.btn-nav {
+    background-color: #359296ad;
+    border: none;
+    text-decoration: none;
+    color: #359296ad;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.btn-nav:hover {
+    background-color: #359296ad;
+}
+
+.btn-link {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 25px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.btn-link:hover {
+    color: #359296ad;
+}
+
+.container {
+    font-family: "Inter", sans-serif;
+    color: #989898;
+    padding: 20px;
+}
+
+.section_title {
+    margin-top: 75px;
+    align-items: center;
+    display: flex;
+    height: 5.5rem;
+    width: 100%;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+
+.btn-search:hover {
+    background-color: #359296ad;
+}
+
+.btn-outline-success {
+    --bs-btn-active-bg: #262626;
+}
+
+.card-link {
+    text-decoration: none;
+}
+
+.card-img-overlay {
+    font-size: 52px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.card-img-overlay:hover {
+    color: #359296ad;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(38, 38, 38, 0.5);
+}
+
+.primary_title {
+    color: #359296ad;
+    font-size: 3.25rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 30px;
+}
+
+.secondary_title {
+    color: #359296ad;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.tertiary_title {
+    color: #2a2a2a;
+    font-size: 2rem;
+    line-height: 1.35;
+}
+
+.container-form {
+    justify-content: space-between;
+    padding-top: 25px;
+}
+
+.row-form {
+    margin-bottom: 25px;
+}
+
+.form-control {
+    background-color: #e6efef;
+    color: #143839ef;
+}
+
+.confirmation-button {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.btn-primary-blue {
+    align-items: center;
+    color: #000000;
+    background-color: #359296ad;
+    border-radius: 0.6rem;
+    box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.0500000007);
+    font-size: 1rem;
+    padding: 8px 16px;
+    font-weight: 600;
+    justify-content: center;
+    border: none;
+    --bs-btn-active-bg: #85e7c0;
+    --bs-btn-active-color: #ffffff;
+}
+
+.btn-primary-blue:hover {
+    color: #ffffff;
+    background-color: #359296ad;
+}
+
+.tabela {
+    --bs-table-bg: transparent;
+}
+
+.tabela th {
+    color: #ffffff;
+}
+
+.tabela td {
+    color: #2a2a2a;
+}
+
+.forgot-pass a {
+    color: #2a2a2a;
+}
+
+.form-control:disabled {
+    background-color: #ffffff;
+}
+
+.icons-option i {
+    padding-right: 25px;
+    font-size: 25px;
+    color: #989898;
+}
+
+.icons-option i:hover {
+    color: #359296ad !important;
+}
+
+.animation {
+    text-align: center;
+}
+
+.id-dashboard {
+    color: #707070;
+}
+
+.music {
+    width: 300px;
+    height: 150px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.music .bar {
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+    background: white;
+    animation: loader 1.5s ease-in-out infinite;
+}
+@keyframes loader {
+    0%,
+    100% {
+        height: 2px;
+    }
+    50% {
+        height: 70px;
+    }
+}
+.music .bar:nth-child(1) {
+    background: #359296ad;
+    animation-delay: 1s;
+}
+.music .bar:nth-child(2) {
+    background: #359296ad;
+    animation-delay: 0.8s;
+}
+.music .bar:nth-child(3) {
+    background: #359296ad;
+    animation-delay: 0.6s;
+}
+.music .bar:nth-child(4) {
+    background: #359296ad;
+    animation-delay: 0.4s;
+}
+.music .bar:nth-child(5) {
+    background: #359296ad;
+    animation-delay: 0.2s;
+}
+.music .bar:nth-child(6) {
+    background: #359296ad;
+    animation-delay: 0.2s;
+}
+.music .bar:nth-child(7) {
+    background: #359296ad;
+    animation-delay: 0.4s;
+}
+.music .bar:nth-child(8) {
+    background: #359296ad;
+    animation-delay: 0.6s;
+}
+.music .bar:nth-child(9) {
+    background: #359296ad;
+    animation-delay: 0.8s;
+}
+.music .bar:nth-child(10) {
+    background: #359296ad;
+    animation-delay: 1s;
+}
