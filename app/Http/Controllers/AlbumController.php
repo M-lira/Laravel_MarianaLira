@@ -48,6 +48,7 @@ class AlbumController extends Controller
         $cover = null;
         if ($request->has('cover')) {
             $cover = Storage::putFile('uploadedImages', $request->cover);
+        }
 
         Album::insert([
             'albumName' => $request->albumName,
@@ -62,9 +63,11 @@ class AlbumController extends Controller
         }
 
         return redirect()->route('album.all')->with('message', 'New album successfully created!');
+
     }
 
-    public function viewAlbum($id) {
+
+    public function viewAlbum($id){
         $bands = DB::table('bands')->get();
         $album = DB::table('albums')
             ->where('albums.id', $id)
