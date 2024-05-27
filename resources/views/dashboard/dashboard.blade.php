@@ -19,7 +19,7 @@
   <div class="id-dashboard">
     @auth
     @if (Auth::user()->userType == 1)
-    <p> Bem vindo, Administrador!</p>
+    <p> Bem vindo, Admin!</p>
     @endif
     @endauth
   </div>

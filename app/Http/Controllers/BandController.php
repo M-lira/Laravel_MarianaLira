@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 
 class BandController extends Controller
 {
-    private function getBands() { //vai buscar as banda a BD
+    private function getBands() { //vai buscar as banda à BD
 
         $band = DB::table('bands')->get();
         return $band;
@@ -23,7 +23,7 @@ class BandController extends Controller
             $myBand->num_albums = Album::where('bands_id', $myBand->id)->count();
         }
 
-        return view('bands.all_bands', compact('band')); //caminho da pasta e nome da view
+        return view('bands.all_bands', compact('band'));
     }
 
     public function addBand() {
@@ -42,7 +42,7 @@ class BandController extends Controller
 
         $photo = null;
         if ($request->has('photo')) {
-            $photo = Storage::putFile('uploadedImages', $request->photo); //adicionar a imagem na pasta "uploadedImages"
+            $photo = Storage::putFile('uploadedImages', $request->photo);
         }
 
         Band::insert([
@@ -52,10 +52,10 @@ class BandController extends Controller
             'photo' => $photo,
             'yearFormation' => $request->yearFormation,
         ]);
-        return redirect()->route('bands.all')->with('message', 'New band successfully created!');   //utiliza o name(rota)
+        return redirect()->route('bands.all')->with('message', 'New band successfully created!');
     }
 
-    public function viewBand($id) { // banda pelo id
+    public function viewBand($id) {
 
         $band = DB::table('bands')
             ->where('id', $id)
@@ -75,7 +75,7 @@ class BandController extends Controller
         $band = Band::findOrFail($request->id);
 
         if ($request->hasFile('photo')) {
-            $photo = Storage::putFile('uploadedImages', $request->file('photo')); //adicionar a imagem na pasta "uploadedImages"
+            $photo = Storage::putFile('uploadedImages', $request->file('photo'));
         } else {
             $photo = $band->photo;
         }
@@ -91,7 +91,7 @@ class BandController extends Controller
         return redirect()->route('bands.all')->with('message', 'Update completed successfully!');
     }
 
-    public function deleteBand($id) { //elimina uma banda pelo id
+    public function deleteBand($id) { //elimina banda pelo id
 
         DB::table('bands')
             ->where('id', ($id))

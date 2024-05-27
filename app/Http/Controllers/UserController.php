@@ -19,7 +19,7 @@ class UserController extends Controller
     public function allUsers()
     {
         $users = $this->getAllUsers();
-        return view('users.all_user', compact('users'));  //retornar view de todos os utilizadores
+        return view('users.all_user', compact('users')); //todo os users
     }
 
     public function viewUser($id)

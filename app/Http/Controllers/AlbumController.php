@@ -35,7 +35,7 @@ class AlbumController extends Controller
         return view('albums.add_album', compact('bands'));
     }
 
-    public function createAlbum(Request $request) { //Adicionar um album
+    public function createAlbum(Request $request) { //Adiciona um album
 
         $bands = Band::all();
 
@@ -47,8 +47,7 @@ class AlbumController extends Controller
 
         $cover = null;
         if ($request->has('cover')) {
-            $cover = Storage::putFile('uploadedImages', $request->cover); //adicionar a imagem do album na pasta "uploadedImages"
-        }
+            $cover = Storage::putFile('uploadedImages', $request->cover);
 
         Album::insert([
             'albumName' => $request->albumName,
@@ -59,10 +58,10 @@ class AlbumController extends Controller
 
         foreach ($bands as $myBand) {
             $myBand->num_albums = Album::where('bands_id', $myBand->id)->count();
-            $myBand->save(); // atualizações
+            $myBand->save();
         }
 
-        return redirect()->route('album.all')->with('message', 'New album successfully created!');  //utiliza o name(rota)
+        return redirect()->route('album.all')->with('message', 'New album successfully created!');
     }
 
     public function viewAlbum($id) {
@@ -73,10 +72,10 @@ class AlbumController extends Controller
             ->select('albums.*', 'bands.name as band_name', )
             ->distinct()
             ->first();
-        return view('albums.view_album', compact('album', 'bands'));  //utiliza o nome da pasta da view onde está
+        return view('albums.view_album', compact('album', 'bands'));
     }
 
-    public function updateAlbum(Request $request) { //Atualizar um album
+    public function updateAlbum(Request $request) { //Atualiza um album
 
         $request->validate([
             'albumName' => 'required|string|max:50',
@@ -88,7 +87,7 @@ class AlbumController extends Controller
 
         // $cover = null;
         if ($request->hasFile('cover')) {
-            $cover = Storage::putFile('uploadedImages', $request->file('cover')); //adicionar a imagem na pasta "uploadedImages"
+            $cover = Storage::putFile('uploadedImages', $request->file('cover'));
         } else {
             $cover = $album->cover;
         }

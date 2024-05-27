@@ -13,11 +13,10 @@ class DashboardController extends Controller
         $this->middleware(['auth']);
     }
 
-    //Vista Dashboard ADMIN
+    //admin
     public function index()
     {
         $isAdmin = Auth::user()->user_type == User::TYPE_ADMIN ? true : false;
-        // criar a variavel se é admin / gestor . Se a condição se verificar é admin
 
         $message = null;
         if ($isAdmin) {
